@@ -1,2 +1,1 @@
-# More MIDI Filters
-Yet another collection of useful MIDI filters.
+# A Set List
