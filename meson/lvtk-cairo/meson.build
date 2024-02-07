@@ -1,3 +1,7 @@
+
+cpp = meson.get_compiler('cpp')
+nodelete_cpp_link_args = cpp.get_supported_link_arguments(['-Wl,-z,nodelete'])
+
 # LV2 installation directory.
 lv2_install_dir = get_option ('lv2dir').strip()
 if lv2_install_dir != ''
