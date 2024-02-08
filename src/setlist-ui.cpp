@@ -18,9 +18,21 @@
 #include <lvtk/ext/urid.hpp>
 #include <lvtk/weak_ref.hpp>
 
-#include "ports.hpp"
+#include "setlist.hpp"
 
 using namespace lvtk;
+
+
+class ProgramTable : public lvtk::Widget {
+public:
+    ProgramTable() { 
+        set_name ("ProgramTable");
+    }
+
+    int num_items() {
+        return 2;
+    }
+};
 
 class SetListUI final : public UI<SetListUI, Parent, Idle, URID, Options> {
 public:
@@ -61,9 +73,10 @@ private:
     class Content : public Widget {
     public:
         Content() {
-            set_name ("lvtk::SetListUI::Content");
+            set_name ("SetListUI::Content");
             set_size (360, 240);
             set_visible (true);
+            set_opaque (true);
         }
 
         ~Content() {

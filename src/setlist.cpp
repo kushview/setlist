@@ -8,7 +8,7 @@
 #include <lvtk/lvtk.hpp>
 #include <lvtk/plugin.hpp>
 
-#include "ports.hpp"
+#include "setlist.hpp"
 
 class SetList : public lvtk::Plugin<SetList> {
 public:
